@@ -1,0 +1,13 @@
+<section class="each">
+    <h1 class="quad-info">Como ganhar na plataforma</h1>
+    <p class="textos">Publique seu material, divulgue suas obras e receba por cada venda realizada.</p>
+
+    {{#each products}}
+        <article class="product-card">
+            <img src="{{this.img}}" alt="{{this.titulo}}">
+            <h3>{{this.titulo}}</h3>
+            <p>Preço de referência: R$ {{this.price}}</p>
+            <p><a href="/product/{{this.id}}">Ver exemplo</a></p>
+        </article>
+    {{/each}}
+</section>
