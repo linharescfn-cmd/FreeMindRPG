@@ -485,6 +485,57 @@ a {
   margin-bottom: 30px;
 }
 
+.square-comentarios {
+  width: 95%;
+  max-width: 1200px;
+  margin: 24px auto 40px;
+  background: linear-gradient(to bottom,#FAF2DB,#D1A66F);
+  border: 2px solid #290277;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.comentarios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.comentario-card {
+  background-color: #FAF2DB;
+  border: 2px solid #290277;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  color: #290277;
+}
+
+.comentario-avatar {
+  width: 92px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50% / 40%;
+  border: 2px solid #290277;
+}
+
+.comentario-nome {
+  margin: 10px 0 6px;
+  font-size: 1.15rem;
+}
+
+.comentario-estrelas {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.comentario-texto {
+  margin: 10px 0 0;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
 .dados {
   display: flex;
   width: 90%;
@@ -1055,6 +1106,10 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .comentarios-grid {
+    grid-template-columns: repeat(2, minmax(170px, 1fr));
+  }
+
   .cart-float {
     right: 14px;
     bottom: 14px;
@@ -1103,6 +1158,10 @@ a {
   }
 
   .catalogo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comentarios-grid {
     grid-template-columns: 1fr;
   }
 }
