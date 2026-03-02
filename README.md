@@ -50,6 +50,25 @@ Servidor padrão:
 
 - `http://localhost:3000`
 
+## Deploy na Vercel (GitHub)
+
+Este projeto já está preparado para deploy na Vercel diretamente da **raiz do repositório**.
+
+Arquivos de deploy adicionados na raiz:
+
+- `vercel.json` (roteamento para função Node)
+- `api/index.js` (entrypoint serverless que exporta o app Express)
+
+### Passo a passo
+
+1. Suba o projeto para um repositório no GitHub.
+2. Acesse a Vercel e clique em **Add New Project**.
+3. Importe o repositório.
+4. Em **Root Directory**, mantenha `.` (raiz).
+5. Clique em **Deploy**.
+
+Não é necessário alterar comando de build para este projeto.
+
 ## Scripts Disponíveis
 
 - `npm start` -> inicia com Node.js

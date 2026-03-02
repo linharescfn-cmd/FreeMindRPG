@@ -20,9 +20,9 @@ const products = [
     },
     {
         id: 4,
-        titulo: 'Vampiro: o Réquiem',
+        titulo: 'Vampiro: o Réquien',
         price: 120.00,
-        img: '/img/livros/Vampiros o Reqium.jpg'
+        img: '/img/livros/vampiros o requien.jpg'
     },
     {
         id: 5,
@@ -48,11 +48,35 @@ function getAllProducts() {
     return products;
 }
 
+function normalizeValue(value) {
+    return String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .trim();
+}
+
+function searchProducts(query) {
+    const searchTerm = normalizeValue(query);
+
+    if (!searchTerm) {
+        return getAllProducts();
+    }
+
+    return products.filter((product) => {
+        const title = normalizeValue(product.titulo);
+        const description = normalizeValue(product.desc);
+
+        return title.includes(searchTerm) || description.includes(searchTerm);
+    });
+}
+
 function getProductById(id) {
     return products.find((product) => product.id === Number(id));
 }
 
 module.exports = {
     getAllProducts,
+    searchProducts,
     getProductById
 };

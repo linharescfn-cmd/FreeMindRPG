@@ -8,17 +8,23 @@
 </head>
 <body>
 <div class="nav-complete">
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <a href="/cadastro" class="cadastro"></a></img>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <a href="/cadastro" class="cadastro"></a>
     
     <div class="nav-links" id="navLinks">
-      <button class="botao-imagem"><a href="/">Início</a></button>
-      <button class="botao-imagem"><a href="/catalogo">catálogo</a></button>
-      <button class="botao-imagem"><a href="/publique" >Publique</a></button>
-      <button class="botao-imagem"><a href="/como-ganhar">Como Ganhar</a></button>
-      <button class="botao-imagem"><a href="/suporte" >Suporte</a></button>
+            <a class="botao-imagem" href="/">Início</a>
+            <a class="botao-imagem" href="/catalogo">catálogo</a>
+            <a class="botao-imagem" href="/publique">Publique</a>
+            <a class="botao-imagem" href="/como-ganhar">Como Ganhar</a>
+            <a class="botao-imagem" href="/suporte">Suporte</a>
     </div>
-      <button class="busca-topo" id="busca-topo">BUSQUE UM LIVRO</button>
+            <button class="busca-topo" id="busca-topo" type="button" aria-label="Abrir busca" aria-expanded="false">BUSQUE UM LIVRO</button>
+            <div class="busca-aba" id="buscaAba">
+                <form class="busca-form" action="/catalogo" method="get">
+                    <input class="busca-input" type="search" name="q" value="{{q}}" placeholder="Busque por título ou descrição" autocomplete="off">
+                    <button class="busca-submit" type="submit">Buscar</button>
+                </form>
+            </div>
    
     
 </div>
@@ -34,6 +40,7 @@
         <p>&copy; 2026 Projeto Integrador</p>
     </footer>
 
+    <script src="/js/nav-search.js"></script>
 
 </body>
 </html>

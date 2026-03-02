@@ -9,8 +9,8 @@ function presentHome(products) {
     return createViewModel('Início', { products });
 }
 
-function presentCatalog(products) {
-    return createViewModel('Catálogo', { products });
+function presentCatalog(products, q = '') {
+    return createViewModel('Catálogo', { products, q });
 }
 
 function presentCadastro() {

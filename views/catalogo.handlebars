@@ -1,10 +1,36 @@
-<section class="each">
-    {{#each products}}
-        <article class="product-card">
-            <img src="{{this.img}}" alt="{{this.titulo}}">
-            <h3>{{this.titulo}}</h3>
-            <p>Preço: R$ {{this.price}}</p>
-            <p><a href="/product/{{this.id}}">Ver mais</a></p>
-        </article>
-    {{/each}}
-</section>
+<div class="catalogo-outer">
+    <div class="catalogo-tabs" role="tablist" aria-label="Abas do catálogo">
+        <button class="catalogo-tab is-active" id="tabClassicos" type="button" data-tab="classicos" aria-selected="true">livros classicos</button>
+        <button class="catalogo-tab" id="tabIndependentes" type="button" data-tab="independentes" aria-selected="false">obras independentes</button>
+    </div>
+
+    <div class="catalogo-square">
+        {{#if q}}
+            <p class="catalogo-feedback">Resultados para "{{q}}"</p>
+        {{/if}}
+
+        <div class="catalogo-classicos" id="catalogoClassicos">
+            {{#if products.length}}
+                <section class="catalogo-grid" id="catalogoGrid">
+                    {{#each products}}
+                        <article class="product-card catalogo-item" data-category="classicos">
+                            <img src="{{this.img}}" alt="{{this.titulo}}">
+                            <h3>{{this.titulo}}</h3>
+                            <p>Preço: R$ {{this.price}}</p>
+                            <p><a href="/product/{{this.id}}">Ver mais</a></p>
+                        </article>
+                    {{/each}}
+                </section>
+                <div class="catalogo-pagination" id="catalogoPagination"></div>
+            {{else}}
+                <p class="catalogo-feedback">Nenhum produto encontrado para essa pesquisa.</p>
+            {{/if}}
+        </div>
+
+        <div class="catalogo-independentes" id="catalogoIndependentes" hidden>
+            <p class="catalogo-feedback">aguardando publicações</p>
+        </div>
+    </div>
+</div>
+
+<script src="/js/catalog-tabs.js"></script>

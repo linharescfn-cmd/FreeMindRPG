@@ -7,8 +7,12 @@ function home(req, res) {
 }
 
 function catalogo(req, res) {
-    const products = productModel.getAllProducts();
-    res.render('catalogo', presenter.presentCatalog(products));
+    const query = typeof req.query.q === 'string' ? req.query.q.trim() : '';
+    const products = query
+        ? productModel.searchProducts(query)
+        : productModel.getAllProducts();
+
+    res.render('catalogo', presenter.presentCatalog(products, query));
 }
 
 function cadastro(req, res) {
