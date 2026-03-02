@@ -452,7 +452,7 @@ a {
   background: #E2B86D;
   height: 42px;
   width: min(440px, 92%);
-  margin-bottom: 20%;
+  margin-bottom: 8px;
   margin-left: 8.5%;
   text-align: center;
   padding-top: 17px;
@@ -464,14 +464,14 @@ a {
   width: clamp(56px, 10vw, 120px);
   position: absolute;
   left: 0.8%;
-  top: 94.5%;
+  top: 1880px;
 
 }
 .pena {
   width: clamp(42px, 7vw, 90px);
   position: absolute;
   left: 6.5%;
-  top: 96.4%;
+  top: 1910px;
 }
 
 .square-3 {
@@ -488,7 +488,7 @@ a {
 .square-comentarios {
   width: 95%;
   max-width: 1200px;
-  margin: 24px auto 40px;
+  margin: 8px auto 40px;
   background: linear-gradient(to bottom,#FAF2DB,#D1A66F);
   border: 2px solid #290277;
   border-radius: 12px;
