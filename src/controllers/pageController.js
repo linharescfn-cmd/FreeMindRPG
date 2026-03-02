@@ -24,8 +24,7 @@ function suporte(req, res) {
 }
 
 function comoGanhar(req, res) {
-    const products = productModel.getAllProducts();
-    res.render('como-ganhar', presenter.presentComoGanhar(products));
+    res.render('como-ganhar', presenter.presentComoGanhar());
 }
 
 function publique(req, res) {

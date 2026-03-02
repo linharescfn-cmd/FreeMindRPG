@@ -1,21 +1,25 @@
-<section class="container-contact">
-	<h1>Entre em contato</h1>
-	{{#if errorMessage}}
-		<p>{{errorMessage}}</p>
-	{{else}}
-		<p>Preencha o formulário abaixo e entraremos em contato com você.</p>
-	{{/if}}
+<section class="cadastro-page">
+	<div class="cadastro-square">
+		<div class="cadastro-form-card">
+			<h1>Entre em contato</h1>
+			{{#if errorMessage}}
+				<p>{{errorMessage}}</p>
+			{{else}}
+				<p>Preencha o formulário abaixo e entraremos em contato com você.</p>
+			{{/if}}
 
-	<form>
-		<label for="nome-contact">Nome</label>
-		<input type="text" id="nome-contact" placeholder="Seu nome" required>
+			<form class="cadastro-form">
+				<label for="nome-contact">Nome</label>
+				<input type="text" id="nome-contact" placeholder="Seu nome" required>
 
-		<label for="email-contact">E-mail</label>
-		<input type="email" id="email-contact" placeholder="Seu e-mail" required>
+				<label for="email-contact">E-mail</label>
+				<input type="email" id="email-contact" placeholder="Seu e-mail" required>
 
-		<label for="mensagem-contact">Mensagem</label>
-		<textarea id="mensagem-contact" placeholder="Digite sua mensagem..." required></textarea>
+				<label for="mensagem-contact">Mensagem</label>
+				<textarea id="mensagem-contact" placeholder="Digite sua mensagem..." required></textarea>
 
-		<button type="submit" id="botao-enviar">Enviar</button>
-	</form>
+				<button type="submit" class="cadastro-submit">ENVIAR</button>
+			</form>
+		</div>
+	</div>
 </section>

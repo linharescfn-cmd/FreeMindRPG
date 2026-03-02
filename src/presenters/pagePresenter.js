@@ -21,8 +21,8 @@ function presentSuporte(errorMessage) {
     return createViewModel('Suporte', { errorMessage });
 }
 
-function presentComoGanhar(products) {
-    return createViewModel('Como Ganhar', { products });
+function presentComoGanhar() {
+    return createViewModel('Como Ganhar');
 }
 
 function presentPublique() {

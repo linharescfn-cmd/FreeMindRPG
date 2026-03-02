@@ -20,7 +20,7 @@ const products = [
     },
     {
         id: 4,
-        titulo: 'Vampiro: o Réquien',
+        titulo: 'Vampiros: o Réquien',
         price: 120.00,
         img: '/img/livros/vampiros o requien.jpg'
     },

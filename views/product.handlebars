@@ -1,7 +1,41 @@
-<section class="product-detail">
-    <img src="{{product.img}}" alt="{{product.titulo}}">
-    <h1>{{product.titulo}}</h1>
-    <p>Preço: R$ {{product.price}}</p>
-    <p>{{product.desc}}</p>
-    <p><a href="/catalogo">Voltar ao catálogo</a></p>
+<section class="produto-page">
+    <div class="produto-square">
+        <article class="produto-card">
+            <div class="produto-media">
+                <img src="{{product.img}}" alt="{{product.titulo}}">
+            </div>
+
+            <div class="produto-info">
+                <h1>{{product.titulo}}</h1>
+                <p class="produto-preco">Preço: R$ {{product.price}}</p>
+
+                {{#if product.desc}}
+                    <p class="produto-desc">{{product.desc}}</p>
+                {{else}}
+                    <p class="produto-desc">Descrição em breve.</p>
+                {{/if}}
+
+                <button
+                    class="produto-add-cart"
+                    id="produtoAddCart"
+                    type="button"
+                    data-id="{{product.id}}"
+                    data-titulo="{{product.titulo}}"
+                    data-price="{{product.price}}"
+                    data-img="{{product.img}}"
+                >
+                    ADICIONAR AO CARRINHO
+                </button>
+
+                <a class="produto-voltar" href="/catalogo">VOLTAR AO CATÁLOGO</a>
+            </div>
+        </article>
+    </div>
+
+    <button class="cart-float" id="cartFloat" type="button" aria-label="Carrinho">
+        <span class="cart-float-icon">🛒</span>
+        <span class="cart-float-count" id="cartFloatCount">0</span>
+    </button>
 </section>
+
+<script src="/js/product-cart.js"></script>

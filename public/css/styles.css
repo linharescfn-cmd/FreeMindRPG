@@ -464,14 +464,14 @@ a {
   width: clamp(56px, 10vw, 120px);
   position: absolute;
   left: 0.8%;
-  top: 85.5%;
+  top: 94.5%;
 
 }
 .pena {
   width: clamp(42px, 7vw, 90px);
   position: absolute;
   left: 6.5%;
-  top: 87%;
+  top: 96.4%;
 }
 
 .square-3 {
@@ -580,6 +580,28 @@ a {
   font-size: 18px;
 }
 
+.catalogo-ver-mais {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border-radius: 5px;
+  border: 2px solid #290277;
+  background-color: #E2B86D;
+  color: #290277;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.catalogo-ver-mais:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 .catalogo-feedback {
   text-align: center;
   color: #290277;
@@ -620,6 +642,234 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* ==================== 3.1) PRODUTO (DETALHE) ==================== */
+.produto-page {
+  width: 100%;
+  margin: 20px auto 30px;
+}
+
+.produto-square {
+  width: 100%;
+  max-width: 1184px;
+  margin: 0 auto;
+  min-height: 600px;
+  background: linear-gradient(to bottom,#FAF2DB,#D1A66F);
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.produto-card {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) 1fr;
+  gap: 24px;
+  align-items: start;
+  background-color: #FAF2DB;
+  border: 2px solid #290277;
+  border-radius: 10px;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.produto-media img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.produto-info {
+  color: #290277;
+}
+
+.produto-info h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+}
+
+.produto-preco {
+  margin: 0 0 16px;
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-weight: bold;
+}
+
+.produto-desc {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.produto-add-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: 2px solid #290277;
+  background-color: #E2B86D;
+  color: #290277;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.produto-add-cart:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.produto-voltar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: 2px solid #290277;
+  background-color: #E2B86D;
+  color: #290277;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.produto-voltar:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.cart-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  min-width: 56px;
+  min-height: 56px;
+  border-radius: 50%;
+  border: 2px solid #290277;
+  background-color: #E2B86D;
+  color: #290277;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  z-index: 20;
+}
+
+.cart-float-icon {
+  font-size: 24px;
+}
+
+.cart-float-count {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  border: 2px solid #290277;
+  background-color: #FAF2DB;
+  color: #290277;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+/* ==================== 3.2) CADASTRO ==================== */
+.cadastro-page {
+  width: 100%;
+  margin: 20px auto 30px;
+}
+
+.cadastro-square {
+  width: 100%;
+  max-width: 1184px;
+  margin: 0 auto;
+  min-height: 600px;
+  background: linear-gradient(to bottom,#FAF2DB,#D1A66F);
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cadastro-form-card {
+  width: min(560px, 100%);
+  background-color: #FAF2DB;
+  border: 2px solid #290277;
+  border-radius: 10px;
+  padding: 22px;
+  box-sizing: border-box;
+  color: #290277;
+}
+
+.cadastro-form-card h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.cadastro-form-card p {
+  margin: 0 0 18px;
+  font-size: 1rem;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cadastro-form label {
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.cadastro-form input,
+.cadastro-form textarea {
+  min-height: 42px;
+  border-radius: 6px;
+  border: 2px solid #290277;
+  background-color: #FAF2DB;
+  color: #290277;
+  font-size: 14px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.cadastro-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.cadastro-submit {
+  margin-top: 14px;
+  min-height: 42px;
+  border-radius: 6px;
+  border: 2px solid #290277;
+  background-color: #E2B86D;
+  color: #290277;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.cadastro-submit:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /* ==================== 4) RESPONSIVO ==================== */
@@ -678,6 +928,14 @@ a {
   }
 
   .catalogo-square {
+    min-height: 0;
+  }
+
+  .produto-square {
+    min-height: 0;
+  }
+
+  .cadastro-square {
     min-height: 0;
   }
 }
@@ -783,6 +1041,25 @@ a {
 
   .catalogo-square {
     padding: 18px 12px;
+  }
+
+  .produto-square {
+    padding: 18px 12px;
+  }
+
+  .cadastro-square {
+    padding: 18px 12px;
+  }
+
+  .produto-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-float {
+    right: 14px;
+    bottom: 14px;
+    min-width: 52px;
+    min-height: 52px;
   }
 }
 
